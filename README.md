@@ -1,6 +1,4 @@
 # MVVM-in-SwiftUI
 MVVM in SwiftUI (WWDC Player)
 
-!(WWDC Player)[WWDC Player.png]
-
-![WWDC Player](WWDC Player.png)
+![WWDC Player](https://github.com/giftbott/MVVM-in-SwiftUI/blob/master/WWDC%20Player.png)
