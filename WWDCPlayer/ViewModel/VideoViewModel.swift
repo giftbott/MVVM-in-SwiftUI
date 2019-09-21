@@ -13,46 +13,18 @@ final class VideoViewModel: ObservableObject, Identifiable {
     case toggleFavorite
   }
   
-  // MARK: Init
 
-  @Published private var video: Video
-  
-  init(video: Video) {
-    self.video = video
-  }
-  
-  
   // MARK: UI <- ViewModel  (1-way Data Binding)
   
   @Published var isSelected: Bool = false
     
-  var id: Int {
-    video.sessionID
-  }
-  var title: String {
-    video.title
-  }
-  var duration: String {
-    let hours = (video.duration / 3600)
-    let minutes = (video.duration - (hours * 3600)) / 60
-    let seconds = video.duration - (hours * 3600) - (minutes * 60)
-    return String(format: "%2d:%02d:%02d", hours, minutes, seconds)
-  }
-  var weekday: WeekDay {
-    video.weekDay
-  }
-  var platforms: String {
-    video.platforms
-      .filter({ $0 != .all })
-      .map({ $0.rawValue })
-      .joined(separator: ", ")
-  }
-  var url: URL? {
-    URL(string: video.urlString)
-  }
-  var isFavorite: Bool {
-    video.isFavorite
-  }
+  let id: Int
+  let title: String
+  let duration: String
+  let weekday: String
+  let platforms: String
+  let url: URL?
+  var isFavorite: Bool { video.isFavorite }
   
   
   // MARK: UI -> ViewModel  (Commands)
@@ -62,6 +34,35 @@ final class VideoViewModel: ObservableObject, Identifiable {
     case .toggleFavorite:
       video.isFavorite.toggle()
     }
+  }
+  
+  
+  // MARK: Private
+  
+  @Published private var video: Video
+  
+  
+  // MARK: Init
+  
+  init(video: Video) {
+    self.video = video
+    
+    self.id = video.sessionID
+    self.title = video.title
+    self.weekday = video.weekDay.rawValue
+    self.url = URL(string: video.urlString)
+    
+    self.duration = {
+      let hours = ($0 / 3600)
+      let minutes = ($0 - (hours * 3600)) / 60
+      let seconds = $0 - (hours * 3600) - (minutes * 60)
+      return String(format: "%2d:%02d:%02d", hours, minutes, seconds)
+    }(video.duration)
+    
+    self.platforms = video.platforms
+        .filter({ $0 != .all })
+        .map({ $0.rawValue })
+        .joined(separator: ", ")
   }
 }
 

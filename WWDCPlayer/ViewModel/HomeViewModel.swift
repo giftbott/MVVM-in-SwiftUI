@@ -9,13 +9,11 @@
 import Foundation
 
 final class HomeViewModel: ObservableObject {
-  private let app: AppModel
-  init(appModel: AppModel) {
-    self.app = appModel
-  }
  
   // MARK: UI <- ViewModel  (1-way Data Binding)
 
+  @Published var currentVideo: VideoViewModel?
+  
   private(set) lazy var videoListViewModel: VideoListViewModel = {
     VideoListViewModel(
       videos: app.videos.map(VideoViewModel.init),
@@ -24,10 +22,19 @@ final class HomeViewModel: ObservableObject {
       })
     )
   }()
-
-  var appTitle: String {
-    "WWDC Player"
-  }
+  let appTitle: String
   
-  @Published var currentVideo: VideoViewModel?
+  
+  // MARK: Private
+  
+  private let app: AppModel
+  
+  
+  // MARK: Init
+  
+  init(appModel: AppModel) {
+    self.app = appModel
+    
+    self.appTitle = "WWDC Player"
+  }
 }
