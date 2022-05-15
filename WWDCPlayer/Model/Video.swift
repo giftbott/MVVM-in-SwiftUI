@@ -8,12 +8,26 @@
 
 import Foundation
 
-struct Video {
-  var sessionID: Int
-  var title: String
-  var duration: Int
-  var weekDay: WeekDay
-  var platforms: [Platform]
-  var urlString: String
+struct Video: Identifiable {
+  var id: Int { sessionID }
+
+  let sessionID: Int
+  let title: String
+  let duration: Int
+  let weekDay: WeekDay
+  let platforms: [Platform]
+  let urlString: String
   var isFavorite = false
+}
+
+extension Video: Equatable {
+  static func == (lhs: Video, rhs: Video) -> Bool {
+    lhs.sessionID == rhs.sessionID
+  }
+}
+
+extension Video {
+  var url: URL? {
+    URL(string: urlString)
+  }
 }

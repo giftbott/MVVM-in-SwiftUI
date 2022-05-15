@@ -9,5 +9,5 @@
 import Foundation
 
 enum Platform: String, CaseIterable {
-  case all, iOS, macOS, tvOS, watchOS
+  case iOS, macOS, tvOS, watchOS
 }

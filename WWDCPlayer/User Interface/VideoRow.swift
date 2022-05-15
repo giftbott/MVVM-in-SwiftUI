@@ -8,73 +8,72 @@
 
 import SwiftUI
 
-struct VideoRow : View {
-  @ObservedObject private var model: VideoViewModel
-  private let isVideoInfo: Bool
-  
-  init(viewModel model: VideoViewModel, isVideoInfo: Bool = false) {
-    self.model = model
-    self.isVideoInfo = isVideoInfo
-  }
+struct VideoRow: View {
 
-  
-  // MARK: Body
-  
+  @ObservedObject var model: VideoRowViewModel
+  var isSelected: Bool = false
+  var isVideoInfoView: Bool = false
+
   var body: some View {
-    VStack(alignment: .leading) {
+    VStack(alignment: .leading, spacing: 0) {
       HStack {
         videoTitle
-        if model.isSelected && !isVideoInfo {
-          playingImage
-        }
-        Spacer()
+        playingImage
+          .showIf(isSelected && !isVideoInfoView)
+        Spacer(minLength: 0)
         favoriteImage
       }
-      videoDescription("Session \(model.id) · \(model.duration)")
-      videoDescription(model.platforms)
+      .padding(.bottom, 4)
+
+      VStack(alignment: .leading, spacing: 2) {
+        Text("Session \(model.state.video.sessionID) · \(model.timeFormattedDuration)")
+        Text(model.platforms)
+          .showIf(!isVideoInfoView)
+      }
+      .font(.footnote.weight(.medium))
+      .foregroundColor(.secondary)
     }
     .padding(.vertical, 4)
+    .frame(maxWidth: .infinity, alignment: .leading)
+    .onAppear { model.action(.onAppear) }
   }
 }
 
-
-// MARK: - Body Content
-
-extension VideoRow {
-  private var videoTitle: some View {
-    Text(model.title)
-      .font(isVideoInfo ? .system(size: 26, weight: .heavy) : .headline)
+fileprivate extension VideoRow {
+  var videoTitle: some View {
+    Text(model.state.video.title)
+      .font(isVideoInfoView ? .title2.bold() : .headline)
+      .foregroundColor(.primary)
+      .multilineTextAlignment(.leading)
       .fixedSize(horizontal: false, vertical: true)
   }
-  
-  private var playingImage: some View {
+
+  var playingImage: some View {
     Image(systemName: "tv.music.note").scaleEffect(0.9)
   }
-  
-  private var favoriteImage: some View {
-    Image(systemName: model.isFavorite ? "star.fill" : "star")
-      .foregroundColor(model.isFavorite ? Color.yellow : Color.gray)
+
+  var favoriteImage: some View {
+    Image(systemName: model.state.video.isFavorite ? "star.fill" : "star")
+      .foregroundColor(model.state.video.isFavorite ? Color.yellow : Color.gray)
       .scaleEffect(1.1)
-      .onTapGesture { self.model.executeCommand(.toggleFavorite) }
-  }
-  
-  private func videoDescription(_ text: String) -> some View {
-    Text(text)
-      .font(.footnote).fontWeight(.semibold)
-      .foregroundColor(.secondary)
+      .onTapGesture { model.action(.toggleFavorite) }
   }
 }
-
-
 
 // MARK: - Previews
 
-#if DEBUG
 struct VideoRow_Previews : PreviewProvider {
   static var previews: some View {
-    VideoRow(viewModel: .init(video: defaultVideos[0]), isVideoInfo: false)
+    let video = defaultVideos[0]
+    return List {
+      VideoRow(model: .init(state: .init(video: video)), isSelected: false, isVideoInfoView: true)
+      VideoRow(model: .init(state: .init(video: video)), isSelected: true, isVideoInfoView: true)
+      VideoRow(model: .init(state: .init(video: video)), isSelected: false, isVideoInfoView: false)
+      VideoRow(model: .init(state: .init(video: video)), isSelected: true, isVideoInfoView: false)
+      VideoRow(model: .init(state: .init(video: defaultVideos[1])))
+      VideoRow(model: .init(state: .init(video: defaultVideos[2])))
+      VideoRow(model: .init(state: .init(video: defaultVideos[2])), isVideoInfoView: true)
+    }
+    .listStyle(.grouped)
   }
 }
-#endif
-
-
