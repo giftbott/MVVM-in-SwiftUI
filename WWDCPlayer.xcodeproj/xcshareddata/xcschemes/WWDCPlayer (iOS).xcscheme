@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "52E3E09E232BC13000B029A0"
-               BuildableName = "WWDCPlayer.app"
-               BlueprintName = "WWDCPlayer"
+               BuildableName = "WWDCPlayer (iOS).app"
+               BlueprintName = "WWDCPlayer (iOS)"
                ReferencedContainer = "container:WWDCPlayer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52E3E09E232BC13000B029A0"
-            BuildableName = "WWDCPlayer.app"
-            BlueprintName = "WWDCPlayer"
+            BuildableName = "WWDCPlayer (iOS).app"
+            BlueprintName = "WWDCPlayer (iOS)"
             ReferencedContainer = "container:WWDCPlayer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "52E3E09E232BC13000B029A0"
-            BuildableName = "WWDCPlayer.app"
-            BlueprintName = "WWDCPlayer"
+            BuildableName = "WWDCPlayer (iOS).app"
+            BlueprintName = "WWDCPlayer (iOS)"
             ReferencedContainer = "container:WWDCPlayer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

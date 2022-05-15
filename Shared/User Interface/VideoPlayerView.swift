@@ -9,10 +9,17 @@
 import AVKit
 import SwiftUI
 
-struct VideoPlayerView: UIViewControllerRepresentable {
+#if os(iOS)
+typealias ViewRepresentable = UIViewControllerRepresentable
+#else
+typealias ViewRepresentable = NSViewRepresentable
+#endif
+
+struct VideoPlayerView: ViewRepresentable {
   private let player = AVPlayer()
   let url: URL?
 
+#if os(iOS)
   func makeUIViewController(context: Context) -> AVPlayerViewController {
     let playerVC = AVPlayerViewController()
     playerVC.player = self.player
@@ -28,6 +35,24 @@ struct VideoPlayerView: UIViewControllerRepresentable {
     self.reset(player: player)
     self.playVideoURL(player: player, url: url)
   }
+#else
+  func makeNSView(context: Context) -> AVPlayerView {
+    let playerView = AVPlayerView()
+    playerView.player = self.player
+    playerView.showsFullScreenToggleButton = true
+    return playerView
+  }
+
+  func updateNSView(_ nsView: AVPlayerView, context: Context) {
+    guard let url = url, let player = nsView.player else { return }
+    if let currentURL = itemURL(of: player), currentURL == url {
+      return
+    }
+
+    self.reset(player: player)
+    self.playVideoURL(player: player, url: url)
+  }
+#endif
 
   private func reset(player: AVPlayer) {
     player.pause()

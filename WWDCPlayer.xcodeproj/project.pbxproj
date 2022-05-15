@@ -3,17 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		059E443A28317902005C2CC9 /* WWDCPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B34023283170F40070BCD6 /* WWDCPlayerApp.swift */; };
+		059E443B28317905005C2CC9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3E0A6232BC13000B029A0 /* HomeView.swift */; };
+		059E443C28317905005C2CC9 /* VideoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3E0BB232BC1C600B029A0 /* VideoRow.swift */; };
+		059E443D28317905005C2CC9 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3E0BD232BC1C600B029A0 /* VideoPlayerView.swift */; };
+		059E443E28317908005C2CC9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3E0D7232F9AA600B029A0 /* HomeViewModel.swift */; };
+		059E443F28317908005C2CC9 /* VideoRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3E0CA232BC32C00B029A0 /* VideoRowViewModel.swift */; };
+		059E44402831790B005C2CC9 /* InMemoryVideoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B34027283173680070BCD6 /* InMemoryVideoStore.swift */; };
+		059E44412831790B005C2CC9 /* VideoDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B34029283173700070BCD6 /* VideoDataService.swift */; };
+		059E44422831790F005C2CC9 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3E0C2232BC1CA00B029A0 /* Platform.swift */; };
+		059E44432831790F005C2CC9 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3E0BA232BC1C000B029A0 /* Video.swift */; };
+		059E44442831790F005C2CC9 /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3E0C1232BC1CA00B029A0 /* WeekDay.swift */; };
+		059E44452831790F005C2CC9 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B3402B2831739C0070BCD6 /* View+.swift */; };
+		059E444628317913005C2CC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E3E0A8232BC13200B029A0 /* Assets.xcassets */; };
 		05B34024283170F40070BCD6 /* WWDCPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B34023283170F40070BCD6 /* WWDCPlayerApp.swift */; };
 		05B340282831736C0070BCD6 /* InMemoryVideoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B34027283173680070BCD6 /* InMemoryVideoStore.swift */; };
 		05B3402A283173750070BCD6 /* VideoDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B34029283173700070BCD6 /* VideoDataService.swift */; };
 		05B3402C2831739C0070BCD6 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B3402B2831739C0070BCD6 /* View+.swift */; };
 		52E3E0A7232BC13000B029A0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3E0A6232BC13000B029A0 /* HomeView.swift */; };
 		52E3E0A9232BC13200B029A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E3E0A8232BC13200B029A0 /* Assets.xcassets */; };
-		52E3E0AC232BC13200B029A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E3E0AB232BC13200B029A0 /* Preview Assets.xcassets */; };
 		52E3E0AF232BC13200B029A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E3E0AD232BC13200B029A0 /* LaunchScreen.storyboard */; };
 		52E3E0BE232BC1C600B029A0 /* VideoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3E0BB232BC1C600B029A0 /* VideoRow.swift */; };
 		52E3E0C0232BC1C600B029A0 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3E0BD232BC1C600B029A0 /* VideoPlayerView.swift */; };
@@ -25,14 +37,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		059E442B283178BB005C2CC9 /* WWDCPlayer (macOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDCPlayer (macOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		059E4436283178BC005C2CC9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		059E4449283179E7005C2CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05B34023283170F40070BCD6 /* WWDCPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCPlayerApp.swift; sourceTree = "<group>"; };
 		05B34027283173680070BCD6 /* InMemoryVideoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryVideoStore.swift; sourceTree = "<group>"; };
 		05B34029283173700070BCD6 /* VideoDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDataService.swift; sourceTree = "<group>"; };
 		05B3402B2831739C0070BCD6 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
-		52E3E09F232BC13000B029A0 /* WWDCPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDCPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E3E09F232BC13000B029A0 /* WWDCPlayer (iOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDCPlayer (iOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E3E0A6232BC13000B029A0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		52E3E0A8232BC13200B029A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		52E3E0AB232BC13200B029A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52E3E0AE232BC13200B029A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52E3E0B0232BC13200B029A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52E3E0BA232BC1C000B029A0 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
@@ -45,6 +59,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		059E4428283178BB005C2CC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52E3E09C232BC13000B029A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,6 +76,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		059E442C283178BB005C2CC9 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				059E4436283178BC005C2CC9 /* macOS.entitlements */,
+				059E4449283179E7005C2CC9 /* Info.plist */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		059E444828317987005C2CC9 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				52E3E0B0232BC13200B029A0 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		05B34025283173400070BCD6 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +120,9 @@
 		52E3E096232BC13000B029A0 = {
 			isa = PBXGroup;
 			children = (
-				52E3E0A1232BC13000B029A0 /* WWDCPlayer */,
+				52E3E0A1232BC13000B029A0 /* Shared */,
+				059E444828317987005C2CC9 /* iOS */,
+				059E442C283178BB005C2CC9 /* macOS */,
 				52E3E0A0232BC13000B029A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,12 +130,13 @@
 		52E3E0A0232BC13000B029A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52E3E09F232BC13000B029A0 /* WWDCPlayer.app */,
+				52E3E09F232BC13000B029A0 /* WWDCPlayer (iOS).app */,
+				059E442B283178BB005C2CC9 /* WWDCPlayer (macOS).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52E3E0A1232BC13000B029A0 /* WWDCPlayer */ = {
+		52E3E0A1232BC13000B029A0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				522885AA2334478F005E8ED1 /* Application */,
@@ -107,17 +148,8 @@
 				52E3E0B8232BC14900B029A0 /* Enum */,
 				52E3E0CE232E85B100B029A0 /* Helper */,
 				52E3E0C3232BC1DC00B029A0 /* Supporting Files */,
-				52E3E0AA232BC13200B029A0 /* Preview Content */,
 			);
-			path = WWDCPlayer;
-			sourceTree = "<group>";
-		};
-		52E3E0AA232BC13200B029A0 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				52E3E0AB232BC13200B029A0 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		52E3E0B6232BC13E00B029A0 /* Model */ = {
@@ -152,7 +184,6 @@
 			children = (
 				52E3E0A8232BC13200B029A0 /* Assets.xcassets */,
 				52E3E0AD232BC13200B029A0 /* LaunchScreen.storyboard */,
-				52E3E0B0232BC13200B029A0 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -177,9 +208,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		52E3E09E232BC13000B029A0 /* WWDCPlayer */ = {
+		059E442A283178BB005C2CC9 /* WWDCPlayer (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52E3E0B3232BC13200B029A0 /* Build configuration list for PBXNativeTarget "WWDCPlayer" */;
+			buildConfigurationList = 059E4437283178BC005C2CC9 /* Build configuration list for PBXNativeTarget "WWDCPlayer (macOS)" */;
+			buildPhases = (
+				059E4427283178BB005C2CC9 /* Sources */,
+				059E4428283178BB005C2CC9 /* Frameworks */,
+				059E4429283178BB005C2CC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WWDCPlayer (macOS)";
+			productName = "WWDCPlayer (macOS)";
+			productReference = 059E442B283178BB005C2CC9 /* WWDCPlayer (macOS).app */;
+			productType = "com.apple.product-type.application";
+		};
+		52E3E09E232BC13000B029A0 /* WWDCPlayer (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E3E0B3232BC13200B029A0 /* Build configuration list for PBXNativeTarget "WWDCPlayer (iOS)" */;
 			buildPhases = (
 				52E3E09B232BC13000B029A0 /* Sources */,
 				52E3E09C232BC13000B029A0 /* Frameworks */,
@@ -189,9 +237,9 @@
 			);
 			dependencies = (
 			);
-			name = WWDCPlayer;
+			name = "WWDCPlayer (iOS)";
 			productName = WWDCPlayer;
-			productReference = 52E3E09F232BC13000B029A0 /* WWDCPlayer.app */;
+			productReference = 52E3E09F232BC13000B029A0 /* WWDCPlayer (iOS).app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -200,17 +248,20 @@
 		52E3E097232BC13000B029A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = Giftbot;
 				TargetAttributes = {
+					059E442A283178BB005C2CC9 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 					52E3E09E232BC13000B029A0 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
 			buildConfigurationList = 52E3E09A232BC13000B029A0 /* Build configuration list for PBXProject "WWDCPlayer" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -222,18 +273,26 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52E3E09E232BC13000B029A0 /* WWDCPlayer */,
+				52E3E09E232BC13000B029A0 /* WWDCPlayer (iOS) */,
+				059E442A283178BB005C2CC9 /* WWDCPlayer (macOS) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		059E4429283178BB005C2CC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				059E444628317913005C2CC9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52E3E09D232BC13000B029A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				52E3E0AF232BC13200B029A0 /* LaunchScreen.storyboard in Resources */,
-				52E3E0AC232BC13200B029A0 /* Preview Assets.xcassets in Resources */,
 				52E3E0A9232BC13200B029A0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +300,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		059E4427283178BB005C2CC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				059E44402831790B005C2CC9 /* InMemoryVideoStore.swift in Sources */,
+				059E44432831790F005C2CC9 /* Video.swift in Sources */,
+				059E443A28317902005C2CC9 /* WWDCPlayerApp.swift in Sources */,
+				059E443B28317905005C2CC9 /* HomeView.swift in Sources */,
+				059E44452831790F005C2CC9 /* View+.swift in Sources */,
+				059E443E28317908005C2CC9 /* HomeViewModel.swift in Sources */,
+				059E443C28317905005C2CC9 /* VideoRow.swift in Sources */,
+				059E44442831790F005C2CC9 /* WeekDay.swift in Sources */,
+				059E44422831790F005C2CC9 /* Platform.swift in Sources */,
+				059E443F28317908005C2CC9 /* VideoRowViewModel.swift in Sources */,
+				059E443D28317905005C2CC9 /* VideoPlayerView.swift in Sources */,
+				059E44412831790B005C2CC9 /* VideoDataService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52E3E09B232BC13000B029A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +352,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		059E4438283178BC005C2CC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36346V3588;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Giftbot. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.giftbot.example.WWDCPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		059E4439283178BC005C2CC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36346V3588;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Giftbot. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.giftbot.example.WWDCPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		52E3E0B1232BC13200B029A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,9 +535,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WWDCPlayer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/WWDCPlayer/Supporting Files/Info.plist";
+				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -413,9 +554,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WWDCPlayer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/WWDCPlayer/Supporting Files/Info.plist";
+				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -431,6 +571,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		059E4437283178BC005C2CC9 /* Build configuration list for PBXNativeTarget "WWDCPlayer (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				059E4438283178BC005C2CC9 /* Debug */,
+				059E4439283178BC005C2CC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		52E3E09A232BC13000B029A0 /* Build configuration list for PBXProject "WWDCPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -440,7 +589,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52E3E0B3232BC13200B029A0 /* Build configuration list for PBXNativeTarget "WWDCPlayer" */ = {
+		52E3E0B3232BC13200B029A0 /* Build configuration list for PBXNativeTarget "WWDCPlayer (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52E3E0B4232BC13200B029A0 /* Debug */,

@@ -74,6 +74,10 @@ struct VideoRow_Previews : PreviewProvider {
       VideoRow(model: .init(state: .init(video: defaultVideos[2])))
       VideoRow(model: .init(state: .init(video: defaultVideos[2])), isVideoInfoView: true)
     }
+#if os(iOS)
     .listStyle(.grouped)
+#elseif os(macOS)
+    .listStyle(.inset)
+#endif
   }
 }

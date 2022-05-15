@@ -23,6 +23,9 @@ struct HomeView: View {
       videoInfo
       videoSelector
     }
+#if os(macOS)
+    .frame(minWidth: 600, minHeight: 700)
+#endif
     .task { await model.action(.onAppear) }
   }
 }
@@ -69,7 +72,11 @@ fileprivate extension HomeView {
         videoRows(groupedBy: $0)
       }
     }
+#if os(iOS)
     .listStyle(.grouped)
+#else
+    .listStyle(.inset)
+#endif
   }
 
   var videoFilter: some View {
